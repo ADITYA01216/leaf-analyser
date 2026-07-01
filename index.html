@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaf Guard | AI Disease Analyser</title>
+    <meta name="description" content="Advanced AI-powered leaf disease detection system for healthier crops and plants.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    
+    <main class="container">
+        <header class="header">
+            <div class="logo">
+                <span class="icon">🌿</span>
+                <h1>LeafGuard <span class="accent">AI</span></h1>
+            </div>
+            <p class="tagline">Precision Plant Pathology in your pocket.</p>
+        </header>
+
+        <section class="analyser-card">
+            <div class="upload-zone" id="dropZone">
+                <input type="file" id="fileInput" accept="image/*" hidden>
+                <div class="upload-content" id="uploadContent">
+                    <div class="upload-icon">📸</div>
+                    <h3>Capture or Upload Leaf</h3>
+                    <p>Drag & drop or click to select an image</p>
+                    <button class="btn-primary" id="selectBtn">Choose Image</button>
+                </div>
+                <div class="preview-content hidden" id="previewContent">
+                    <img id="imagePreview" src="" alt="Leaf Preview">
+                    <div class="preview-actions">
+                        <button class="btn-secondary" id="retakeBtn">Cancel</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-zone hidden" id="resultsZone">
+                <div class="loader hidden" id="loader">
+                    <div class="spinner"></div>
+                    <p>AI is inspecting your leaf...</p>
+                </div>
+                
+                <div class="result-card" id="resultCard">
+                    <div class="result-header">
+                        <span class="status-badge">Analysis Complete</span>
+                    </div>
+                    <h2 id="predictionResult">Detecting...</h2>
+                    <p id="confidenceScore">Diagnosis confirmed by LeafGuard AI Model.</p>
+                    
+                    <div class="action-footer">
+                        <button class="btn-outline" id="resetBtn">New Scan</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="settings">
+            <button class="btn-text" id="configBtn">⚙️ Backend Config</button>
+        </div>
+
+
+        <footer class="footer">
+            <p>&copy; 2026 LeafGuard AI System. All Rights Reserved.</p>
+        </footer>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
